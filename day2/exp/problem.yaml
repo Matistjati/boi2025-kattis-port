@@ -1,7 +1,7 @@
 author: Mateusz Radecki
 source: Baltic Olympiad in Informatics 2025
 name: Exponents
-license: cc by-sa
+license: permission
 type: scoring
 grading:
   show_test_data_groups: true
