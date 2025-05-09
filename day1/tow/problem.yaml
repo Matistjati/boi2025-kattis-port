@@ -1,0 +1,10 @@
+author: Justas Klimas
+source: Baltic Olympiad in Informatics 2025
+name: Tower
+license: cc by-sa
+type: scoring
+grading:
+  show_test_data_groups: true
+limits:
+  time_multiplier: 2
+validation: custom interactive score
