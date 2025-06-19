@@ -56,25 +56,9 @@ $p_{1}$, then $p_{2}$, and so on, and finally we follow walk $p_{k}$ returning t
 \end{tabular}
 \end{center}
 
-\section*{Explanation of the 4th test case from the sample case}
+\section*{Explanation of sample 4}
 \begin{figure}[h!]
-\centering
-\begin{tikzpicture}[
-->, >=Stealth,
-node distance=2cm and 2.5cm,
-every node/.style={circle, draw=black, thick, minimum size=10mm},
-every path/.style={thick}
-]
-\node (1) at (0,0) {1};
-\node (2) [above left=of 1] {2};
-\node (3) [below left=of 1] {3};
-\node (4) [above right=of 1] {4};
-\node (5) [below right=of 1] {5};
-\draw (1) -- (2) node[midway, draw=none, above] {1};
-\draw (3) -- (1) node[midway, draw=none, below] {1};
-\draw (1) -- (4) node[midway, draw=none, above] {3};
-\draw (5) -- (1) node[midway, draw=none, below] {3};
-\draw (2) -- (3) node[midway, draw=none, left] {2};
-\draw (4) -- (5) node[midway, draw=none, right] {4};
-\end{tikzpicture}
+    \centering
+    \includegraphics[width=0.6\textwidth]{sample.pdf}
+    \caption{Illustration of sample 4. The arrows represent the walks between meeting points.}
 \end{figure}
