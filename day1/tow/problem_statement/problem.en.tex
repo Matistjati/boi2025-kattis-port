@@ -74,7 +74,7 @@ stream takes time.
 Please also note that the interactor is not adaptive, meaning that the initial order of the doors
 is fixed beforehand in each test case and does not change during the interaction.
 
-\section{Example interaction}
+\section*{Example interaction}
 Suppose we have only one test case with $n=6$, and the order of the doors is $5, 3, 0, 2, 1, 4$.
 The interaction could look as follows:
 
@@ -86,56 +86,23 @@ The interaction could look as follows:
 \texttt{1 100} & & $t=1$ and $k=100$. \\ \hline
 \texttt{6} & & Interactor gives the number of doors in the first test case. \\ \hline
 & \texttt{? 0 1 2} & Your program asks which pairs of doors are the closest. \\ \hline
-\texttt{2} & & Pairs of doors $\{0,2\}$ and $\{1,2\}$ are the closest. \\
-\texttt{0 2} & & \\
-\texttt{1 2} & & \\ \hline
+\shortstack{\texttt{2} \\ \texttt{0 2} \\ \texttt{1 2}} & & Pairs of doors $\{0,2\}$ and $\{1,2\}$ are the closest. \\ \hline
 & \texttt{? 4 1 3} & Your program asks which pairs of doors are the closest. \\ \hline
-\texttt{1} & & Pair $\{1,4\}$ is the closest. \\
-\texttt{1 4} & & \\ \hline
+\shortstack{\texttt{1} \\ \texttt{1 4}} & & Pair $\{1,4\}$ is the closest. \\ \hline
 & \texttt{? 0 5 1} & Your program asks which pairs of doors are the closest. \\ \hline
-\texttt{3} & & Pairs $\{0,5\}$, $\{0,1\}$, and $\{1,5\}$ are the closest. \\
-\texttt{0 5} & & \\
-\texttt{0 1} & & \\
-\texttt{1 5} & & \\ \hline
+\shortstack{\texttt{3} \\ \texttt{0 5} \\ \texttt{0 1} \\ \texttt{1 5}} & & Pairs $\{0,5\}$, $\{0,1\}$, and $\{1,5\}$ are the closest. \\ \hline
 & \texttt{! 4 5 3 0 2 1} & Your program correctly outputs the order of the doors. \\ \hline
 \end{tabular}
 \end{center}
 
+
 \medskip
 
 \begin{center}
-\begin{tikzpicture}
-\begin{scope}
-\foreach \i\l in {0/5, 1/3, 2/0, 3/2, 4/1, 5/4} {
-\node[circle, draw, fill=white] (n\i) at ({60 * \i}:2) {\l};
-}
-\foreach \i in {0,...,4} {
-\draw (n\i) -- (n\the\numexpr\i+1\relax);
-}
-\draw (n5) -- (n0);
-\draw[very thick] (n2) -- (n3) -- (n4) -- (n2);
-\end{scope}
-\begin{scope}[shift={(5,0)}]
-\foreach \i\l in {0/5, 1/3, 2/0, 3/2, 4/1, 5/4} {
-\node[circle, draw, fill=white] (n\i) at ({60 * \i}:2) {\l};
-}
-\foreach \i in {0,...,4} {
-\draw (n\i) -- (n\the\numexpr\i+1\relax);
-}
-\draw (n5) -- (n0);
-\draw[very thick] (n1) -- (n4) -- (n5) -- (n1);
-\end{scope}
-\begin{scope}[shift={(10,0)}]
-\foreach \i\l in {0/5, 1/3, 2/0, 3/2, 4/1, 5/4} {
-\node[circle, draw, fill=white] (n\i) at ({60 * \i}:2) {\l};
-}
-\foreach \i in {0,...,4} {
-\draw (n\i) -- (n\the\numexpr\i+1\relax);
-}
-\draw (n5) -- (n0);
-\draw[very thick] (n2) -- (n4) -- (n0) -- (n2);
-\end{scope}
-\end{tikzpicture}
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=1\textwidth]{example.pdf}
+\end{figure}
 \end{center}
 
 \medskip
